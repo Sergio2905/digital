@@ -1832,7 +1832,7 @@ body._lock {
 .path__image {
   width: 100%;
   aspect-ratio: 742/416;
-  background: url("../../img/path/no-image.svg") center/40% 40% no-repeat, #FBFBFC;
+  background: url("../img/path/no-image.svg") center/40% 40% no-repeat, #FBFBFC;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
