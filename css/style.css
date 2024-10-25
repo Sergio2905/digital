@@ -1695,10 +1695,6 @@ body._lock {
   margin-bottom: 16px;
 }
 
-.about {
-  padding-bottom: 128px;
-}
-
 .about__body {
   display: flex;
   gap: 24px;
@@ -2485,10 +2481,6 @@ body._lock {
 
   .seo {
     padding: calc(64px + 64 * (100vw - 430px) / 1082) 0;
-  }
-
-  .about {
-    padding-bottom: calc(64px + 64 * (100vw - 430px) / 1082);
   }
 
   .path {
