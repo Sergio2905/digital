@@ -491,6 +491,7 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .list__item {
@@ -577,7 +578,7 @@ body._lock {
 
 .checkbox {
   font-size: 0.75rem;
-  padding-left: 24px;
+  padding-left: 28px;
   position: relative;
   cursor: pointer;
   color: var(--gray);
@@ -592,28 +593,26 @@ body._lock {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  width: 16px;
-  height: 16px;
+  top: -5px;
+  width: 24px;
+  height: 24px;
   transition: all 0.5s ease;
-  border-radius: 4px;
 }
 
 .checkbox::before {
-  border: 1px solid var(--gray);
+  background: url("../img/icons/icons.svg#square") center/contain no-repeat;
+  opacity: 0.6;
 }
 
 .checkbox::after {
-  background: url("../img/icons/icons.svg#check") center/70% no-repeat, var(--blue);
+  background: url("../img/icons/icons.svg#check") center/contain no-repeat;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0);
 }
 
 .checkbox.active::after {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
 }
 
 .checkbox input {
@@ -643,6 +642,8 @@ body._lock {
 
 .header {
   margin-top: 26px;
+  position: relative;
+  z-index: 10;
 }
 
 .header__body {
@@ -761,24 +762,67 @@ body._lock {
   width: 100%;
   height: 100%;
   stroke: var(--black);
+  transition: all 0.5s ease;
 }
 
 .submenu {
   position: absolute;
   top: 100%;
   left: -24px;
-  background: var(--white);
   padding-top: 16px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: all 0.5s ease;
+  overflow: hidden;
+  z-index: 100;
+  max-width: 888px;
+}
+
+.submenu__body {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  overflow: hidden;
+}
+
+.submenu__block {
+  padding: 16px;
+  background: var(--white);
+}
+
+.submenu__block:first-child {
+  padding-right: 235px;
+  background: url("../img/header/bg.webp") bottom right/contain no-repeat;
+}
+
+.submenu__block:last-child {
+  padding-right: 16px;
+  background: none;
+}
+
+.submenu__block:nth-child(1n+2) {
+  background: #FBFBFC;
+}
+
+.submenu__title {
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.submenu__desc {
+  font-size: 0.875rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 22px;
+  white-space: normal;
 }
 
 .submenu__list {
-  padding: 16px;
-  border-radius: 16px;
-  border: 1px solid #DBDBDB;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .submenu__link {
@@ -842,6 +886,7 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .lang__btn svg {
@@ -927,6 +972,7 @@ body._lock {
   align-items: center;
   justify-content: center;
   margin-left: 4px;
+  transition: all 0.5s ease;
 }
 
 .phones__btn svg {
@@ -2834,6 +2880,7 @@ body._lock {
 .menu-footer__link {
   line-height: 1.5;
   color: var(--gray);
+  transition: all 0.5s ease;
 }
 
 .contacts__block {
@@ -2855,6 +2902,7 @@ body._lock {
 .contacts__item {
   line-height: 1.5;
   color: var(--gray);
+  transition: all 0.5s ease;
 }
 
 .contacts__item:not(:last-child) {
@@ -3069,6 +3117,16 @@ body._lock {
   }
 }
 
+@media (max-width: 1215px) {
+  .submenu__block:first-child {
+    padding-right: calc(155px + 80 * (100vw - 993px) / 222);
+  }
+
+  .submenu__block:last-child {
+    padding-right: 16px;
+  }
+}
+
 @media (max-width: 993px) {
   .header__menu-icon {
     display: flex;
@@ -3114,8 +3172,24 @@ body._lock {
     padding: 16px 0;
   }
 
+  .menu__item {
+    flex-wrap: wrap;
+  }
+
   .menu__item.active .menu__btn {
     transform: rotate(-180deg);
+  }
+
+  .menu__item.active .menu__btn svg {
+    stroke: var(--gray);
+  }
+
+  .menu__item.active .menu__link {
+    color: var(--gray);
+  }
+
+  .menu__item.active .submenu {
+    margin-top: 8px;
   }
 
   .menu__item {
@@ -3123,10 +3197,59 @@ body._lock {
     justify-content: space-between;
   }
 
+  .menu__link {
+    font-size: 1rem;
+  }
+
   .menu__btn {
     pointer-events: all;
     width: 16px;
     height: 16px;
+  }
+
+  .submenu {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    top: unset;
+    left: unset;
+    flex: 1 1 100%;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    max-width: unset;
+  }
+
+  .submenu__body {
+    flex-direction: column;
+    border: none;
+    background: #FBFBFC;
+  }
+
+  .submenu__block {
+    padding-block: 12px;
+  }
+
+  .submenu__block:first-child {
+    background: none;
+    padding-right: 16px;
+  }
+
+  .submenu__block:nth-child(1n+2) {
+    background: none;
+    padding-top: 0;
+  }
+
+  .submenu__title {
+    margin-bottom: 12px;
+  }
+
+  .submenu__desc {
+    display: none;
+  }
+
+  .submenu__list {
+    border: none;
   }
 
   .features-main {
@@ -3224,6 +3347,10 @@ body._lock {
     pointer-events: all;
   }
 
+  .lang.active .lang__btn {
+    transform: rotate(-180deg);
+  }
+
   .phones.active {
     z-index: 2;
   }
@@ -3315,11 +3442,18 @@ body._lock {
 
 @media (max-width: 576px) {
   .header__btn {
-    margin: 24px 0 0;
+    margin: 16px 0 0;
   }
 
   .menu__list {
     border-bottom: 1.5px dashed #DBDBDB;
+  }
+
+  .lang.active .lang__body {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    margin-top: 8px;
   }
 
   .lang {
@@ -3335,6 +3469,19 @@ body._lock {
   .lang__btn {
     width: 16px;
     height: 16px;
+  }
+
+  .lang__body {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    padding: 0;
+    border: none;
+    height: 0;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
   }
 
   .phones__body {
@@ -3477,6 +3624,10 @@ body._lock {
 }
 
 @media (any-hover: hover) {
+  .btn-blue:hover {
+    background: #1A73E8;
+  }
+
   .navigation__prev:hover svg,
   .navigation__next:hover svg {
     stroke: var(--blue);
@@ -3486,18 +3637,22 @@ body._lock {
     opacity: 1;
   }
 
-  .menu__item:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
-
   .menu__item:hover .menu__btn {
     transform: rotate(-180deg);
   }
 
-  .menu__link:hover {
+  .menu__item:hover .menu__btn svg {
+    stroke: var(--gray);
+  }
+
+  .menu__item:hover .menu__link {
     color: var(--gray);
+  }
+
+  .menu__item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
   }
 
   .submenu__link:hover {
@@ -3518,6 +3673,10 @@ body._lock {
     pointer-events: all;
   }
 
+  .lang:hover .lang__btn {
+    transform: rotate(-180deg);
+  }
+
   .lang__link:hover {
     color: var(--black);
     background: #FBFBFC;
@@ -3536,6 +3695,10 @@ body._lock {
 
   .phones:hover .phones__main {
     border-color: transparent;
+  }
+
+  .phones:hover .phones__btn {
+    transform: rotate(-180deg);
   }
 
   .phones__link:hover {
@@ -3617,5 +3780,13 @@ body._lock {
   .article__prev:hover svg,
   .article__next:hover svg {
     stroke: var(--blue);
+  }
+
+  .menu-footer__link:hover {
+    color: var(--black);
+  }
+
+  .contacts__item:not(span):hover {
+    color: var(--black);
   }
 }
