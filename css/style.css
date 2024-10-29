@@ -3237,15 +3237,19 @@ body._lock {
 
 .program__info {
   flex: 1 1 580px;
+}
+
+.program__desc {
   line-height: 1.5;
 }
 
-.program__info p:not(:last-child) {
+.program__desc p:not(:last-child) {
   margin-bottom: 24px;
 }
 
 .program__items {
   flex: 1 1 544px;
+  padding-top: 125px;
 }
 
 .program__item {
@@ -3760,6 +3764,12 @@ body._lock {
   fill: var(--blue);
 }
 
+@media (min-width: 993px) {
+  .program__sticky {
+    max-width: 580.5px;
+  }
+}
+
 @media (max-width: 1512px) {
   .title {
     font-size: calc(2.5rem + 20 * (100vw - 26.875rem) / 1082);
@@ -4189,6 +4199,19 @@ body._lock {
   .progress__item:nth-child(5) {
     grid-column: unset;
     grid-row: unset;
+  }
+
+  .program__body {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .program__info {
+    flex: unset;
+  }
+
+  .program__items {
+    flex: unset;
   }
 
   .tools__wrapper {
