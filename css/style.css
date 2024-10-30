@@ -3834,8 +3834,8 @@ body._lock {
   }
 
   .title span {
-    width: calc(36px + 26 * (100vw - 320px) / 1192);
-    height: calc(36px + 26 * (100vw - 320px) / 1192);
+    width: calc(24px + 38 * (100vw - 320px) / 1192);
+    height: calc(24px + 38 * (100vw - 320px) / 1192);
   }
 
   .breadcrumbs {
