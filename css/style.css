@@ -1355,6 +1355,12 @@ body._lock {
   margin-right: 18px;
 }
 
+.list-main__icon img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
 .list-main__text {
   font-weight: 500;
 }
@@ -3858,6 +3864,7 @@ body._lock {
     width: calc(24px + 16 * (100vw - 320px) / 1192);
     min-width: calc(24px + 16 * (100vw - 320px) / 1192);
     height: calc(24px + 16 * (100vw - 320px) / 1192);
+    margin-right: calc(8px + 10 * (100vw - 320px) / 1192);
   }
 
   .list-main__text {
