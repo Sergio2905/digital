@@ -3434,6 +3434,7 @@ body._lock {
   width: 100%;
   height: 443px;
   line-height: 1.5;
+  resize: vertical;
   border: none;
   background: none;
   scrollbar-width: thin;
