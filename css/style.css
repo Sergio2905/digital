@@ -665,7 +665,9 @@ body._lock {
 }
 
 .radio__item::before {
-  background: url("../img/icons/icons.svg#square") center/contain no-repeat;
+  -webkit-mask: url("../img/icons/icons.svg#square") center/contain no-repeat;
+          mask: url("../img/icons/icons.svg#square") center/contain no-repeat;
+  background: var(--black);
   opacity: 0.6;
 }
 
@@ -676,6 +678,10 @@ body._lock {
 }
 
 .radio__item.active {
+  opacity: 1;
+}
+
+.radio__item.active::before {
   opacity: 1;
 }
 
