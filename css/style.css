@@ -712,6 +712,7 @@ body._lock {
   position: relative;
   opacity: 0.4;
   pointer-events: none;
+  transition: all 0.5s ease;
 }
 
 .select.active {
@@ -790,8 +791,8 @@ body._lock {
   transform: translate(0, -50%);
   width: 16px;
   height: 16px;
-  -webkit-mask: url("../../img/icons/icons.svg#arrow-down2") center/contain no-repeat;
-          mask: url("../../img/icons/icons.svg#arrow-down2") center/contain no-repeat;
+  -webkit-mask: url("../img/icons/icons.svg#arrow-down2") center/contain no-repeat;
+          mask: url("../img/icons/icons.svg#arrow-down2") center/contain no-repeat;
   background: var(--black);
   transition: all 0.5s ease;
 }
@@ -3423,7 +3424,6 @@ body._lock {
 
 .keywords-tools__area {
   width: 100%;
-  height: 465px;
   padding: 16px;
   border-radius: 16px;
   background: #FBFBFC;
@@ -3431,11 +3431,10 @@ body._lock {
 }
 
 .keywords-tools__area textarea {
-  line-height: 1.5;
-  resize: none;
-  border: none;
   width: 100%;
-  height: 100%;
+  height: 465px;
+  line-height: 1.5;
+  border: none;
   background: none;
   scrollbar-width: thin;
   scrollbar-color: #87898F #cdcdcd;
@@ -3568,6 +3567,7 @@ body._lock {
   border-radius: 8px;
   border: 1px solid #DBDBDB;
   background: #FBFBFC;
+  height: 32px;
 }
 
 .ads-tools__input {
@@ -3586,13 +3586,12 @@ body._lock {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
   opacity: 0.4;
+  transition: all 0.5s ease;
 }
 
 .ads-tools__btn.active {
   opacity: 1;
-  pointer-events: all;
 }
 
 .ads-tools__btn.active svg {
