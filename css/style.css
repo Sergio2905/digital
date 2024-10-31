@@ -1854,11 +1854,14 @@ body._lock {
   padding: 128px 0;
 }
 
+.clients__body {
+  position: relative;
+}
+
 .clients__slider {
   overflow: hidden;
   height: 100%;
-  position: relative;
-  padding: 0 60px;
+  margin: 0 60px;
 }
 
 .clients__slide {
@@ -1877,10 +1880,9 @@ body._lock {
 
 .clients__navigation {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  top: 16px;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
 
@@ -3374,16 +3376,18 @@ body._lock {
   color: var(--white);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: #3986EE;
+  background: #6baaff;
   font-size: 1rem;
 }
 
 .order__form input::-moz-placeholder {
   opacity: 1;
+  color: var(--white);
 }
 
 .order__form input::placeholder {
   opacity: 1;
+  color: var(--white);
 }
 
 .order__form input:not(:last-of-type) {
@@ -4058,16 +4062,21 @@ body._lock {
     padding: calc(64px + 64 * (100vw - 430px) / 1082) 0;
   }
 
+  .give__card {
+    padding: calc(16px + 8 * (100vw - 320px) / 1192);
+  }
+
   .give__price {
-    font-size: calc(1rem + 4 * (100vw - 26.875rem) / 1082);
+    font-size: calc(0.875rem + 6 * (100vw - 26.875rem) / 1082);
   }
 
   .give__value {
-    font-size: calc(2.5rem + 12 * (100vw - 20rem) / 1192);
+    font-size: calc(2rem + 20 * (100vw - 20rem) / 1192);
   }
 
   .give__btn {
-    font-size: calc(1.125rem + 6 * (100vw - 26.875rem) / 1082);
+    font-size: calc(1rem + 8 * (100vw - 26.875rem) / 1082);
+    height: calc(44px + 12 * (100vw - 320px) / 1192);
   }
 
   .progress {
@@ -4291,7 +4300,7 @@ body._lock {
   }
 
   .clients__slider {
-    padding: 0;
+    margin: 0;
   }
 
   .clients__navigation {
@@ -4642,10 +4651,6 @@ body._lock {
 
   .path__item:nth-child(1n+3) {
     grid-column: unset;
-  }
-
-  .give__card {
-    flex-wrap: wrap;
   }
 
   .ads-tools__row {
