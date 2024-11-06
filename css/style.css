@@ -873,6 +873,11 @@ body._lock {
   padding: 0 !important;
 }
 
+.modal__order .order__form::before,
+.modal__order .order__form::after {
+  display: none;
+}
+
 .header {
   margin-top: 26px;
   position: relative;
@@ -1516,6 +1521,7 @@ body._lock {
   font-family: var(--geologica);
   font-size: 1.25rem;
   white-space: nowrap;
+  color: var(--black);
 }
 
 .footer-main__link {
@@ -3602,8 +3608,8 @@ body._lock {
   left: 0;
   top: 60%;
   transform: translate(-100%, -50%);
-  width: 110%;
-  height: 130%;
+  width: 112%;
+  height: 137%;
   background: url("../img/order/decor1.webp") center/contain no-repeat;
 }
 
@@ -3613,8 +3619,8 @@ body._lock {
   right: 0;
   top: 50%;
   transform: translate(100%, -50%);
-  width: 110%;
-  height: 130%;
+  width: 100%;
+  height: 138%;
   background: url("../img/order/decor2.webp") center/contain no-repeat;
 }
 
