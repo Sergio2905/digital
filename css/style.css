@@ -869,6 +869,7 @@ body._lock {
 }
 
 .modal__order {
+  width: 1215px;
   padding: 0 !important;
 }
 
@@ -4420,6 +4421,10 @@ body._lock {
 }
 
 @media (max-width: 993px) {
+  .modal__order {
+    width: 100%;
+  }
+
   .header__menu-icon {
     display: flex;
   }
