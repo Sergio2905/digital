@@ -5,7 +5,7 @@
     <title>{keyword.digital}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20241031110613">
+    <link rel="stylesheet" href="css/style.min.css?_v=20241106133430">
 </head>
 
 <body>
@@ -336,7 +336,7 @@
                     <a href="#" class="lang__link">Ru</a>
                 </div>
             </div>
-            <button class="header__btn btn-blue" data-move="order, 576">
+            <button class="header__btn btn-blue" data-move="order, 576" data-modal="order">
                 Замовити дзвінок
                 <svg>
                     <use href="img/icons/icons.svg#arrow"></use>
@@ -418,7 +418,7 @@
                 </div>
             </section>
 
-            <section class="for">
+            <section class="for for_3">
                 <div class="for__container container">
                     <h2 class="for__title title">
                         Для кого
@@ -426,12 +426,40 @@
                         цей курс?
                     </h2>
                     <div class="for__body">
-
+                        <div class="for__item">
+                            <h3 class="for__name">Для тих, хто шукає роботу в IT та digital </h3>
+                            <p class="for__text">
+                                Завжди цікавились сучасними технологіями? Давно спостерігаєте
+                                за цікавим життям знайомих айтішників? Може досить заздрити? Приєднуйтесь до "клубу
+                                обраних" — тим більше, що реклама це
+                                не так складно як писати код чи малювати складні інтерфейси
+                            </p>
+                        </div>
+                        <div class="for__item">
+                            <h3 class="for__name">Для тих, хто хоче змінити сферу діяльності</h3>
+                            <p class="for__text">
+                                Курс місткий, але не об'ємний за часом, базові практичні навички можна отримати вже за
+                                тиждень. Перші проекти можна легко поєднувати з основною роботою, особливо якщо у вас є
+                                вільний час та доступ к комп'ютеру
+                            </p>
+                        </div>
+                        <div class="for__item">
+                            <h3 class="for__name">Для тих, хто тільки починає кар'єру</h3>
+                            <p class="for__text">
+                                Закінчили школу або виш та ще не визначились з професією? Спробуйте себе в маркетингу.
+                                Це ідеальний варіант для старту кар'єри. Більш того, мій перший учень був саме
+                                випускником школи. У 2017 році я звільнявся з агенції і мені було потрібно передати
+                                знання стажеру, який мав мене замінити — тоді я навчив його базовим навичкам за 5 днів
+                            </p>
+                            <div class="for__image">
+                                <picture><source srcset="img/for/image1.webp" type="image/webp"><img src="img/for/image1.png" alt="Image"></picture>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="for">
+            <section class="for for_red">
                 <div class="for__container container">
                     <h2 class="for__title title">
                         Кому
@@ -439,7 +467,29 @@
                         не підходить?
                     </h2>
                     <div class="for__body">
-
+                        <div class="for__item">
+                            <h3 class="for__name">Власникам бізнесу</h3>
+                            <p class="for__text">
+                                Курс розрахований саме на майбутніх фахівців, тут ми детально розбираємо всі інструменти
+                                для роботи, стратегії для різних ніш і т.п. Власникам бізнесу не потрібно стільки
+                                інформації, якщо ви підприємець, вам підійде формат консультацій або аудиту, це буде
+                                набагато швидше та буде враховувати специфіку саме вашого бізнесу
+                            </p>
+                            <div class="for__image for__image_center">
+                                <picture><source srcset="img/for/image2.webp" type="image/webp"><img src="img/for/image2.png" alt="Image"></picture>
+                            </div>
+                        </div>
+                        <div class="for__item">
+                            <h3 class="for__name">Тємщікам, кріптанам і любителям халяви</h3>
+                            <p class="for__text">
+                                Тим хто мріє про ламбаргіні з баленсіагами та роботу під пальмою 2 години на день. Тут
+                                немає легких грошей, це така сама робота, як і всі інші, просто цікавіша, комфортніша та
+                                прибутковіша за більшість інших
+                            </p>
+                            <div class="for__image for__image_center">
+                                <picture><source srcset="img/for/image3.webp" type="image/webp"><img src="img/for/image3.png" alt="Image"></picture>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1305,8 +1355,33 @@
 </footer>
     </div>
 
-    
-    <script src="js/app.min.js?_v=20241031110613"></script>
+    <div class="modal" id="order">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__order order">
+                <div class="order__body">
+                    <h2 class="order__title title">
+                        Лише один крок
+                        <span><img src="img/order/icon.svg" alt="Icon"></span>
+                        до нового життя
+                    </h2>
+                    <div class="order__form">
+                        <input type="text" placeholder="Імʼя">
+                        <input type="text" placeholder="Пошта">
+                        <input type="text" placeholder="Нік телеграма">
+                        <button type="submit">Записатись</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20241106133430"></script>
 </body>
 
 </html>

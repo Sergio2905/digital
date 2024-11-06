@@ -5,7 +5,7 @@
     <title>{keyword.digital}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20241031110613">
+    <link rel="stylesheet" href="css/style.min.css?_v=20241106133430">
 </head>
 
 <body>
@@ -336,7 +336,7 @@
                     <a href="#" class="lang__link">Ru</a>
                 </div>
             </div>
-            <button class="header__btn btn-blue" data-move="order, 576">
+            <button class="header__btn btn-blue" data-move="order, 576" data-modal="order">
                 Замовити дзвінок
                 <svg>
                     <use href="img/icons/icons.svg#arrow"></use>
@@ -1313,8 +1313,33 @@
 </footer>
     </div>
 
-    
-    <script src="js/app.min.js?_v=20241031110613"></script>
+    <div class="modal" id="order">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__order order">
+                <div class="order__body">
+                    <h2 class="order__title title">
+                        Лише один крок
+                        <span><img src="img/order/icon.svg" alt="Icon"></span>
+                        до нового життя
+                    </h2>
+                    <div class="order__form">
+                        <input type="text" placeholder="Імʼя">
+                        <input type="text" placeholder="Пошта">
+                        <input type="text" placeholder="Нік телеграма">
+                        <button type="submit">Записатись</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20241106133430"></script>
 </body>
 
 </html>
