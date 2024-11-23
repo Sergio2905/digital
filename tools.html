@@ -5,7 +5,7 @@
     <title>{keyword.digital}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20241106172605">
+    <link rel="stylesheet" href="css/style.min.css?_v=20241123184153">
 </head>
 
 <body>
@@ -163,7 +163,10 @@
                                             <li class="submenu__item">
                                                 <a href="single.html" class="submenu__link">
                                                     <img src="img/header/icon.svg" alt="Icon">
-                                                    Стаття
+                                                    <span>
+                                                        Стаття
+                                                        <span class="submenu__label">Незабаром</span>
+                                                    </span>
                                                 </a>
                                             </li>
                                             <li class="submenu__item">
@@ -175,7 +178,10 @@
                                             <li class="submenu__item">
                                                 <a href="single.html" class="submenu__link">
                                                     <img src="img/header/icon.svg" alt="Icon">
-                                                    Курс “Google Ads з нуля”
+                                                    <span>
+                                                        Курс “Google Ads з нуля”
+                                                        <span class="submenu__label">Незабаром</span>
+                                                    </span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -419,12 +425,30 @@
                                     </div>
                                     <div class="gen-tools__btns">
                                         <button type="button" class="gen-tools__btn btn-blue">
-                                            Згенерувати компанію
+                                            Згенерувати
+                                            <svg>
+                                                <use href="img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                            <svg>
+                                                <use href="img/icons/icons.svg#clock"></use>
+                                            </svg>
                                         </button>
                                         <button type="button" class="gen-tools__btn btn-white">
                                             Скопіювати
                                             <svg>
                                                 <use href="img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                            <svg>
+                                                <use href="img/icons/icons.svg#clock"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="gen-tools__btn btn-white">
+                                            CSV
+                                            <svg>
+                                                <use href="img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                            <svg>
+                                                <use href="img/icons/icons.svg#clock"></use>
                                             </svg>
                                         </button>
                                     </div>
@@ -904,7 +928,8 @@
                                         <div class="ads-tools__row">
                                             <p class="ads-tools__name">Опис 1*</p>
                                             <div class="ads-tools__item">
-                                                <input class="ads-tools__input" type="text" placeholder="Опис">
+                                                <textarea class="ads-tools__textarea" type="text"
+                                                    placeholder="Опис"></textarea>
                                                 <button class="ads-tools__btn">
                                                     <svg>
                                                         <use href="img/icons/icons.svg#pin"></use>
@@ -934,7 +959,8 @@
                                         <div class="ads-tools__row">
                                             <p class="ads-tools__name">Опис 1*</p>
                                             <div class="ads-tools__item">
-                                                <input class="ads-tools__input" type="text" placeholder="Опис">
+                                                <textarea class="ads-tools__textarea" type="text"
+                                                    placeholder="Опис"></textarea>
                                                 <button class="ads-tools__btn">
                                                     <svg>
                                                         <use href="img/icons/icons.svg#pin"></use>
@@ -964,7 +990,8 @@
                                         <div class="ads-tools__row">
                                             <p class="ads-tools__name">Опис 1*</p>
                                             <div class="ads-tools__item">
-                                                <input class="ads-tools__input" type="text" placeholder="Опис">
+                                                <textarea class="ads-tools__textarea" type="text"
+                                                    placeholder="Опис"></textarea>
                                                 <button class="ads-tools__btn">
                                                     <svg>
                                                         <use href="img/icons/icons.svg#pin"></use>
@@ -994,7 +1021,8 @@
                                         <div class="ads-tools__row">
                                             <p class="ads-tools__name">Опис 1*</p>
                                             <div class="ads-tools__item">
-                                                <input class="ads-tools__input" type="text" placeholder="Опис">
+                                                <textarea class="ads-tools__textarea" type="text"
+                                                    placeholder="Опис"></textarea>
                                                 <button class="ads-tools__btn">
                                                     <svg>
                                                         <use href="img/icons/icons.svg#pin"></use>
@@ -1189,7 +1217,10 @@
                     <nav class="menu-footer__body">
                         <ul class="menu-footer__list">
                             <li class="menu-footer__item">
-                                <a href="#" class="menu-footer__link">Товарна</a>
+                                <a href="#" class="menu-footer__link">
+                                    Товарна
+                                    <span class="menu-footer__label">Незабаром</span>
+                                </a>
                             </li>
                             <li class="menu-footer__item">
                                 <a href="#" class="menu-footer__link">Банерна</a>
@@ -1339,7 +1370,7 @@
 </div>
     </div>
 
-    <script src="js/app.min.js?_v=20241106172605"></script>
+    <script src="js/app.min.js?_v=20241123184153"></script>
 </body>
 
 </html>
