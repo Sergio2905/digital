@@ -1014,7 +1014,6 @@ body._lock {
   visibility: hidden;
   pointer-events: none;
   transition: all 0.5s ease;
-  overflow: hidden;
   z-index: 100;
   max-width: 888px;
 }
@@ -1024,7 +1023,7 @@ body._lock {
   border-radius: 16px;
   border: 1px solid #DBDBDB;
   display: flex;
-  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .submenu__block {
@@ -1044,6 +1043,7 @@ body._lock {
 
 .submenu__block:nth-child(1n+2) {
   background: #FBFBFC;
+  border-radius: 0 16px 16px 0;
 }
 
 .submenu__title {
@@ -1694,18 +1694,76 @@ body._lock {
   gap: 24px;
 }
 
-.include ul {
+.include__main {
   flex: 1 1 50%;
+}
+
+.include__main h2,
+.include__main h3,
+.include__main h4,
+.include__main h5,
+.include__main h6,
+.include__main p,
+.include__main ul,
+.include__main ol {
+  line-height: 1.5;
+}
+
+.include__main h2:not(:last-child),
+.include__main h3:not(:last-child),
+.include__main h4:not(:last-child),
+.include__main h5:not(:last-child),
+.include__main h6:not(:last-child),
+.include__main p:not(:last-child),
+.include__main ul:not(:last-child),
+.include__main ol:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.include__main h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.include__main h3 {
+  font-size: 1.3125rem;
+  font-weight: 500;
+}
+
+.include__main h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.include__main h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.include__main h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.include__main a {
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.include__main ol {
+  counter-reset: list-counter;
+}
+
+.include__main ol li::before {
+  counter-increment: list-counter;
+  content: counter(list-counter) ". ";
 }
 
 .include li {
   position: relative;
   padding-left: 32px;
   line-height: 1.5;
-}
-
-.include li:not(:last-child) {
-  margin-bottom: 24px;
 }
 
 .include li::before {
@@ -3269,10 +3327,6 @@ body._lock {
   line-height: 1.5;
 }
 
-.how__main li:not(:last-child) {
-  margin-bottom: 24px;
-}
-
 .how__main li::before {
   content: "";
   position: absolute;
@@ -3287,6 +3341,68 @@ body._lock {
 .how__main span {
   font-weight: 500;
   color: var(--blue);
+}
+
+.how__main h2,
+.how__main h3,
+.how__main h4,
+.how__main h5,
+.how__main h6,
+.how__main p,
+.how__main ul,
+.how__main ol {
+  line-height: 1.5;
+}
+
+.how__main h2:not(:last-child),
+.how__main h3:not(:last-child),
+.how__main h4:not(:last-child),
+.how__main h5:not(:last-child),
+.how__main h6:not(:last-child),
+.how__main p:not(:last-child),
+.how__main ul:not(:last-child),
+.how__main ol:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.how__main h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.how__main h3 {
+  font-size: 1.3125rem;
+  font-weight: 500;
+}
+
+.how__main h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.how__main h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.how__main h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.how__main a {
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.how__main ol {
+  counter-reset: list-counter;
+}
+
+.how__main ol li::before {
+  counter-increment: list-counter;
+  content: counter(list-counter) ". ";
 }
 
 .how__extra {
@@ -3307,7 +3423,6 @@ body._lock {
 }
 
 .how__info {
-  flex: 1 1 auto;
   padding: 24px;
   border-radius: 32px;
   border: 1px solid #DBDBDB;
@@ -3923,6 +4038,17 @@ body._lock {
   background: none;
   scrollbar-width: thin;
   scrollbar-color: #87898F #cdcdcd;
+  position: relative;
+}
+
+.keywords-tools__area textarea::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../../img/icons/icons.svg#eye") center/contain no-repeat;
 }
 
 .keywords-tools__area textarea::-webkit-scrollbar {
@@ -4003,10 +4129,17 @@ body._lock {
 .gen-tools__btn svg {
   width: 20px;
   height: 20px;
+  margin-left: 8px;
+  stroke: var(--black);
+  stroke-width: 1.5px;
 }
 
 .gen-tools__btn svg:nth-child(2) {
   display: none;
+}
+
+.gen-tools__btn.btn-blue svg {
+  stroke: var(--white);
 }
 
 .gen-tools__help {
@@ -4194,7 +4327,11 @@ body._lock {
   font-size: 0.875rem;
   line-height: 1.5;
   max-width: 210px;
-  margin-bottom: 80px;
+  margin-bottom: 16px;
+}
+
+.footer__google {
+  margin-bottom: 16px;
 }
 
 .footer__menus {
@@ -4324,6 +4461,10 @@ body._lock {
 .contacts__btn {
   margin-top: 16px;
   font-size: calc(0.75rem + 2 * (100vw - 20rem) / 1192);
+}
+
+.contacts__btn_mob {
+  display: none;
 }
 
 .contacts__socials {
@@ -4778,6 +4919,7 @@ body._lock {
     flex-direction: column;
     border: none;
     background: #FBFBFC;
+    box-shadow: none;
   }
 
   .submenu__block {
@@ -4910,7 +5052,6 @@ body._lock {
   }
 
   .footer__desc {
-    margin-bottom: 0;
     max-width: unset;
   }
 
@@ -4921,8 +5062,10 @@ body._lock {
 
   .footer__contacts {
     flex: unset;
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
 
   .contacts__block:not(:last-child) {
@@ -5206,10 +5349,6 @@ body._lock {
 }
 
 @media (max-width: 480px) {
-  .submenu__link {
-    white-space: normal;
-  }
-
   .submenu__label {
     transform: translate(20px, 0);
     font-size: 0.625rem;
@@ -5223,8 +5362,25 @@ body._lock {
     width: 50%;
   }
 
+  .menu-footer__link {
+    color: var(--black);
+  }
+
   .menu-footer__label {
     font-size: 0.625rem;
+  }
+
+  .contacts__item:not(span) {
+    color: var(--black);
+  }
+
+  .contacts__btn {
+    display: none;
+  }
+
+  .contacts__btn_mob {
+    display: block;
+    grid-column: span 2;
   }
 }
 
@@ -5382,6 +5538,10 @@ body._lock {
     background: #E6F4EA;
   }
 
+  .include__main a:hover {
+    text-decoration: none;
+  }
+
   .categories__item:hover {
     color: var(--white);
     background: var(--blue);
@@ -5438,6 +5598,10 @@ body._lock {
   .article__prev:hover svg,
   .article__next:hover svg {
     stroke: var(--blue);
+  }
+
+  .how__main a:hover {
+    text-decoration: none;
   }
 
   .program__link:hover {
