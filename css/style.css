@@ -5555,7 +5555,7 @@ html.with-fancybox body.hide-scrollbar {
   width: 12px;
   height: 12px;
   cursor: s-resize;
-  background: url("../../img/icons/icons.svg#resize") center/cover no-repeat;
+  background: url("../img/icons/icons.svg#resize") center/cover no-repeat;
 }
 
 .keywords-tools__radio {
@@ -5739,7 +5739,7 @@ html.with-fancybox body.hide-scrollbar {
   width: 12px;
   height: 12px;
   cursor: s-resize;
-  background: url("../../img/icons/icons.svg#resize") center/cover no-repeat;
+  background: url("../img/icons/icons.svg#resize") center/cover no-repeat;
 }
 
 .ads-tools__btn {
